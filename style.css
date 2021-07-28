@@ -9,10 +9,17 @@ p{
     width:100%;
     font-size:medium;
 }
+.new
+{
+  background: -webkit-linear-gradient(#ffbb02, #fd0000);
+    
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .iglink:hover
 {
     
-    background: -webkit-linear-gradient(#f58520, #dd2a78,#8134af);
+    background: -webkit-linear-gradient(#ffbb02, #fd0000);
     
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
