@@ -1,4 +1,8 @@
 let fontRegular, fontItalic, fontBold;
+let salvarAgora = false;
+function salvar() {
+    salvarAgora = true;
+}
 function setup() {
     cnv = createCanvas(1080 / 4, 1350 / 4);
     pixelDensity(4);
@@ -42,4 +46,21 @@ function draw() {
     fill('black')
     txt = "\n" + document.querySelector("textarea").value;
     text(txt, 180, 350, 750, 800)
+    if (salvarAgora) {
+        save("arteComunicadoCA");
+        salvarAgora = false;
+        salvarNoNavegador()
+    }
+}
+
+let txtSalvo = localStorage.getItem('ultimoTexto');
+document.querySelector("textArea").innerHTML = txtSalvo;
+
+
+document.querySelector("textarea").addEventListener('change', salvarNoNavegador);
+
+function salvarNoNavegador() {
+    console.log("salveii")
+    let txtSalvo = document.querySelector("textArea").value;
+    localStorage.setItem('ultimoTexto', txtSalvo)
 }
