@@ -1,0 +1,17 @@
+body
+{
+    margin:0;
+    display:grid;
+    place-items:center;
+    justify-content:center;
+    grid-template-rows:.2fr 1fr;
+    height:100%;
+    width:100%;
+    background:rgb(46, 46, 46)
+}
+textarea
+{
+    display:block;
+    width:30em;
+    height:7em;
+}
